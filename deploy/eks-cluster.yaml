@@ -1,0 +1,18 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: near-stake-wars-iii
+
+managedNodeGroups:
+  - name: near-stake-wars
+    labels: { role: near-stake-wars }
+    instanceType: c5a.xlarge
+    desiredCapacity: 1
+    minSize: 1
+    maxSize: 1
+    updateConfig:
+      maxUnavailable: 1
+    volumeSize: 50
+    ebsOptimized: true
+    privateNetworking: true

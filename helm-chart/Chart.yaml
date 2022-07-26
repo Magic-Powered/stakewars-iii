@@ -1,0 +1,11 @@
+apiVersion: v2
+name: near-node
+description: Neat Node Helm chart for Kubernetes statefulset
+type: application
+keywords:
+  - magicpowered
+  - kubernetes
+  - near
+  - stake-wars-iii
+version: 0.1.0
+appVersion: 1.0.0

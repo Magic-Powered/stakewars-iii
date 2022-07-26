@@ -1,0 +1,4 @@
+grafana:
+  grafana.ini:
+    auth.anonymous:
+      enabled: true

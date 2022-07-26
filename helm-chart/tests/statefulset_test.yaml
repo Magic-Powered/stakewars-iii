@@ -1,0 +1,27 @@
+suite: test statefulset
+templates:
+  - templates/statefulset.yaml
+tests:
+  - it: statefulset should work
+    set:
+      applicationName: mp-node
+      containerImage.repository: nearprotocol/nearcore
+      containerImage.tag: master
+      containerImage.pullPolicy: IfNotPresent
+      containerPorts.http.port: 3030
+      initContainers.test.command: ["sh", "-c", "./test.sh"]
+    asserts:
+      - isKind:
+          of: StatefulSet
+      - matchRegex:
+          path: metadata.name
+          pattern: -mp-node$
+      - equal:
+          path: spec.template.spec.containers[0].ports[0].containerPort
+          value: 3030
+      - equal:
+          path: spec.volumeClaimTemplates[0].metadata.name
+          value: node-data-volume
+      - equal:
+          path: spec.template.spec.initContainers[0].image
+          value: nearprotocol/nearcore:master
