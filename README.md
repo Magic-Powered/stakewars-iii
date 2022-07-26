@@ -8,11 +8,11 @@
 
 ## Requirements
 
-[aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-[docker](https://docs.docker.com/engine/install/)
-[eksctl](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
-[helm](https://helm.sh/docs/intro/install/)
-[near-cli](https://github.com/near/near-cli)
+- [aws-cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [docker](https://docs.docker.com/engine/install/)
+- [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
+- [helm](https://helm.sh/docs/intro/install/)
+- [near-cli](https://github.com/near/near-cli)
 
 ## AWS Setup
 
